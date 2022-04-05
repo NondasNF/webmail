@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2022_04_05_064152) do
 
   create_table "replies", force: :cascade do |t|
     t.string "sender", null: false
+    t.string "reciver", null: false
     t.text "body", null: false
     t.integer "email_id", null: false
     t.datetime "created_at", precision: 6, null: false

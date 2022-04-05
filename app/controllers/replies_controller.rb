@@ -8,14 +8,13 @@ class RepliesController < ApplicationController
 
   def create
     @email = Email.find(params[:email_id])
-    @reply = @email.replies.new(sender: current_user.email, body: params[:reply][:body])
+    @reply = @email.replies.new(sender: current_user.email, reciver: @email.sender, body: params[:reply][:body])
     if @reply.save
       redirect_to @email
     else
       render 'new'
     end
   end
-
 
   private
   def reply_params

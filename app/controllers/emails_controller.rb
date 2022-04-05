@@ -3,6 +3,10 @@ class EmailsController < ApplicationController
 
   def index
     @emails = Email.where(user_id: current_user.id)
+    @replies = Reply.where(reciver: current_user.email)
+    @replies.each do |reply|
+      @emails += Email.where(id: reply.email_id)
+    end
   end
 
   def show
