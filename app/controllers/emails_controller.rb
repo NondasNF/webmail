@@ -7,6 +7,7 @@ class EmailsController < ApplicationController
 
   def show
     @email = Email.find(params[:id])
+    @replies = @email.replies.all
   end
 
   def new
@@ -15,7 +16,7 @@ class EmailsController < ApplicationController
 
   def create
     if User.exists?(email: email_params[:reciver])
-      reciver = User.find_by(email: email)
+      reciver = User.find_by(email: email_params[:reciver])
       send_email(reciver)
     else
       redirect_to new_email_path, notice: 'The email address you entered does not exist in our system. Please try again.'

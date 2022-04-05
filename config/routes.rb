@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :user
   resources :emails do
-    put :reply, on: :member
+    resources :replies, only: [:new, :create]
     put :redirect, on: :member
   end
   

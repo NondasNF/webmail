@@ -5,4 +5,5 @@ class Email < ApplicationRecord
   validates :body, presence: true
 
   belongs_to :user
+  has_many :replies, dependent: :destroy
 end
