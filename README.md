@@ -2,7 +2,7 @@
 
 Um app de mensagens bem semelhante a um serviçõ de email, o usuário após se cadastrar pode ver seu emails, 
 enviar mensagens para outros usuários, reponder e apagar mensagens.
-Foi desenvolvido em Ruby, utilizei gems que facilitaram o desenvolvimento como Rails, Devise, Bootstrap, e o herooku como servidor de deploy.
+Foi desenvolvido em Ruby, utilizei gems que facilitaram o desenvolvimento como Rails, Devise, Bootstrap, e o heroku como servidor de deploy.(https://rails-webmail.herokuapp.com/)
 
 ## My opinion:
 
