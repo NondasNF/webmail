@@ -1,7 +1,19 @@
 <h1>Emails</h1>
-<%= link_to 'New  E-mail', new_email_path %>
-<% @emails.each do |email| %>
-  <p><%= email.sender %></p>
-  <p><%= email.subject %></p>
-  <%= link_to 'Show', email %>
+<%= link_to 'New  E-mail', new_email_path, class: "extracttitle"  %>
+<table class="table">
+  <thead class="table-dark">
+    <tr>
+      <th>Sender</th>
+      <th>Subject</th>
+      <th>Date</th>
+      <th colspan="8"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @emails.each do |email| %>
+      <tr>
+      <td><%= email.sender %></td>
+      <td><%= email.subject %></td>
+      <td><%= email.created_at %></td>
+      <td><%= link_to 'Show', email %></td>
 <% end %>

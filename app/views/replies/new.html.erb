@@ -1,5 +1,7 @@
 <%= form_with(model: [@email, @reply]) do |f| %>
-  <%= f.label :body %>
-  <%= f.text_area :body %>
-  <%= f.submit %>
+  <div class="mb-3">
+    <%= f.label :body, value:"Message", class:"form-label"%>
+    <%= f.text_area :body, class:"form-control"%>
+  </div>
+  <%= f.submit value:"Reply", class:"btn btn-primary"%>
 <% end %> 

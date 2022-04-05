@@ -1,9 +1,15 @@
 <%= form_with(model: @email) do |f| %>
-  <%= f.label :reciver %>
-  <%= f.text_field :reciver %>
-  <%= f.label :subject %>
-  <%= f.text_field :subject %>
-  <%= f.label :body %>
-  <%= f.text_area :body %>
-  <%= f.submit %>
+  <div class="mb-3">
+    <%= f.label :reciver, class:"form-label" %>
+    <%= f.text_field :reciver, class:"form-control" %>
+  </div>
+  <div class="mb-3">
+    <%= f.label :subject, class:"form-label" %>
+    <%= f.text_field :subject, class:"form-control" %>
+  </div>
+  <div class="mb-3">
+    <%= f.label :body, value:"Message",class:"form-label" %>
+    <%= f.text_area :body, class:"form-control" %>
+  </div>
+  <%= f.submit value:"Send E-mail", class:"btn btn-primary"%>
 <% end %>

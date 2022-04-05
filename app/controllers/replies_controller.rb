@@ -1,4 +1,5 @@
 class RepliesController < ApplicationController
+  before_action :authenticate_user!
 
   def new
     @email = Email.find(params[:email_id])

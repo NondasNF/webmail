@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'emails#index'
   devise_for :users
   resources :user
   resources :emails do

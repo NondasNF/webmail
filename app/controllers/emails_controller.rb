@@ -28,11 +28,16 @@ class EmailsController < ApplicationController
                    body: email_params[:body] }
     @email = reciver.emails.new(new_params)
     if @email.save
-      redirect_to emails_path
-      @message = 'Email sent successfully'
+      redirect_to emails_path, notice: 'Email sent successfully'
     else
-      render :new
+      render :new, notice: 'Email could not be sent'
     end
+  end
+
+  def destroy 
+    @email = Email.find(params[:id])
+    @email.destroy
+    redirect_to emails_path
   end
 
   private
