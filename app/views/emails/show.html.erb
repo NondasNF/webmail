@@ -1,0 +1,14 @@
+<h3>From: <%= @email.sender %></h3>
+<h3>To: <%= @email.reciver %></h3>
+<br>
+<p>Subject: <%= @email.subject %></p>
+<br>
+<p>Message: <%= @email.body %></p>
+<br>
+<p>Date: <%= @email.created_at %></p>
+
+
+<%= link_to 'Back', emails_path %>
+<%= link_to 'Reply', reply_email_path %>
+<%= link_to 'Redirect', redirect_email_path %>
+<%= link_to 'Destroy', @email, method: :delete, data: { confirm: 'Are you sure?' } %>

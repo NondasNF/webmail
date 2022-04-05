@@ -1,0 +1,9 @@
+<%= form_with(model: @email) do |f| %>
+  <%= f.label :reciver %>
+  <%= f.text_field :reciver %>
+  <%= f.label :subject %>
+  <%= f.text_field :subject %>
+  <%= f.label :body %>
+  <%= f.text_area :body %>
+  <%= f.submit %>
+<% end %>

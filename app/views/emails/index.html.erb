@@ -1,0 +1,7 @@
+<h1>Emails</h1>
+<%= link_to 'New  E-mail', new_email_path %>
+<% @emails.each do |email| %>
+  <p><%= email.sender %></p>
+  <p><%= email.subject %></p>
+  <%= link_to 'Show', email %>
+<% end %>
