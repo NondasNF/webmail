@@ -15,7 +15,6 @@
   <% end %>
 <% end %>
     
-    <%= link_to 'Back', emails_path %>
+<%= link_to 'Back', emails_path %>
 <%= link_to 'Reply', new_email_reply_path(@email.id) %>
-<%= link_to 'Redirect', redirect_email_path %>
 <%= link_to 'Destroy', @email, method: :delete, data: { confirm: 'Are you sure?' } %>

@@ -37,7 +37,7 @@ class EmailsController < ApplicationController
       render :new, notice: 'Email could not be sent'
     end
   end
-
+  
   def destroy 
     @email = Email.find(params[:id])
     @email.destroy
