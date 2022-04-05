@@ -19,15 +19,15 @@ Rails v"6.1.5"
 # Installation
 Instale o RVM para poder instalar o Ruby:
 ~~~
-curl -sSL https://get.rvm.io | bash -s stable
+$ curl -sSL https://get.rvm.io | bash -s stable
 ~~~
 Instale o Ruby com o comando a seguir:
 ~~~
-rvm install ruby-3.0.0
+$ rvm install ruby-3.0.0
 ~~~
 Instale agora o Rails
 ~~~
-curl -L https://get.rvm.io | bash -s stable --rails
+$ curl -L https://get.rvm.io | bash -s stable --rails
 ~~~
 Instale as demais dependências:
 ~~~
@@ -49,3 +49,8 @@ Após se cadastrar você agora pode acessa a sua caixa de entrada do email, inbo
 Para enviar mensagens selecione a Opção "New E-mail" e preencha os campos com o destinatário, assunto e a mensagem, para enviar a mensagem selecione a opção "Send E-mail"
 É possivel tanto enviar email para si mesmo como criar uma outra conta e enviar emails para essa outra
 
+Se tiver alguma dúvida sobre onde se aplica a utilização do modelo REST você pode executar no seu terminal o comando(na raiz do projeto e após o ter configurado):
+~~~
+$ rails routes
+~~~
+Será possivel ver as rotas da aplicação e onde se aplicam os métodos HTTP como GET, POST, PUT, DELETE, etc.
