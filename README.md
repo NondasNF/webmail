@@ -16,7 +16,7 @@ Ruby v"3.0.0"
 
 Rails v"6.1.5"
 
-# Installation
+# Installation:
 Instale o RVM para poder instalar o Ruby:
 ~~~
 $ curl -sSL https://get.rvm.io | bash -s stable
